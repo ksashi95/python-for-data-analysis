@@ -8,16 +8,15 @@ Learn Python specifically for the Data Analyst workflow:
 
 **Get data → Understand data → Clean data → Transform data → Analyze data → Visualize data → Find insights**
 
-The focus is on learning concepts through datasets, exercises, and progressively larger analysis projects.
+The repository is organized as a progressive curriculum. Each section has its own folder and learning guide. Topic notebooks will be added as each section is studied.
 
-## Learning Structure
+## Curriculum
 
 ### 01. Python Foundations
 
-Build the Python foundation required for data analysis.
+Python basics required for data analysis.
 
-Topics:
-- Python syntax and basic concepts
+- Syntax and basic concepts
 - Variables
 - Operators
 - Data types
@@ -28,37 +27,39 @@ Topics:
 - Dictionaries
 - Sets
 - Conditional statements
-- `for` and `while` loops
+- `for` loops
+- `while` loops
 - Functions
 - Basic list comprehensions
 
-The goal is practical fluency rather than learning Python as a general-purpose programming language.
+→ [Open Section 01](01-python-foundations/README.md)
 
 ### 02. Python for Working With Data
 
-Learn how Python works with data and external files.
+Working with libraries, files, dates, and data objects.
 
-Topics:
 - Importing libraries
 - File paths
 - CSV files
 - Excel files
-- Dates and basic date handling
+- Dates
 - Basic error handling
-- Understanding Python objects
-- DataFrame and Series concepts
+- Python objects
+- Series and DataFrame concepts
+
+→ [Open Section 02](02-python-for-working-with-data/README.md)
 
 ### 03. NumPy
 
-Learn the NumPy concepts that support numerical analysis and Pandas.
+Numerical computing foundations used in data analysis.
 
-Topics:
 - Arrays
 - Dimensions and shape
 - Data types
-- Indexing and slicing
+- Indexing
+- Slicing
 - Vectorized operations
-- Basic numerical aggregation
+- Numerical aggregation
 - `np.array()`
 - `np.mean()`
 - `np.median()`
@@ -67,46 +68,35 @@ Topics:
 - `np.max()`
 - `np.std()`
 
+→ [Open Section 03](03-numpy/README.md)
+
 ### 04. Pandas Fundamentals
 
-Develop the core DataFrame skills used in Python data analysis.
+Core DataFrame skills for working with datasets.
 
-Topics:
 - Series and DataFrames
 - Loading CSV and Excel data
 - Inspecting datasets
-- Selecting columns and rows
-- Filtering data
-- Sorting data
+- Selecting rows and columns
+- Filtering
+- Sorting
 - Creating columns
-- Renaming columns
+- Renaming
 - Removing rows and columns
 - Aggregation
 - `groupby()`
 - `value_counts()`
-- `unique()` and `nunique()`
+- `unique()` / `nunique()`
 
-Important inspection methods:
-
-```python
-df.head()
-df.tail()
-df.shape
-df.columns
-df.info()
-df.describe()
-df.dtypes
-df.nunique()
-```
+→ [Open Section 04](04-pandas/README.md)
 
 ### 05. Data Cleaning
 
-Learn how to identify and fix common data-quality problems.
+Turning messy data into analysis-ready data.
 
-Topics:
 - Missing values
 - Duplicate records
-- Incorrect data types
+- Data types
 - Numeric conversion
 - Date conversion
 - String cleaning
@@ -115,24 +105,12 @@ Topics:
 - Outliers
 - Data validation
 
-Important Pandas tools include:
-
-```python
-df.isna()
-df.dropna()
-df.fillna()
-df.duplicated()
-df.drop_duplicates()
-df.astype()
-pd.to_numeric()
-pd.to_datetime()
-```
+→ [Open Section 05](05-data-cleaning/README.md)
 
 ### 06. Data Transformation & Analysis
 
-Use Pandas to answer analytical questions and create useful derived metrics.
+Transforming data and answering analytical questions.
 
-Topics:
 - Grouping and aggregation
 - Multiple aggregations
 - Merging datasets
@@ -143,91 +121,56 @@ Topics:
 - Running totals
 - `shift()`
 - `rolling()`
-- Analytical transformations
+- Derived analytical metrics
 
-Core examples:
-
-```python
-df.groupby("Category")["Sales"].sum()
-
-pd.merge(customers, orders, on="customer_id")
-
-pd.pivot_table(df, values="Sales", index="Category", aggfunc="sum")
-```
+→ [Open Section 06](06-data-transformation-analysis/README.md)
 
 ### 07. Data Visualization
 
-Learn to communicate analytical results clearly with Python.
+Communicating analytical results visually.
 
-#### Matplotlib
-
+- Matplotlib
+- Seaborn
 - Bar charts
 - Line charts
 - Scatter plots
 - Histograms
 - Box plots
+- Heatmaps
 - Titles and labels
 - Legends
 - Figure sizing
+- Choosing the right chart
 
-#### Seaborn
-
-- Bar plots
-- Count plots
-- Histograms
-- Box plots
-- Scatter plots
-- Line plots
-- Heatmaps
-
-Focus on choosing the right visualization for the analytical question.
-
-| Analytical question | Useful chart |
-|---|---|
-| Compare categories | Bar chart |
-| Show a trend over time | Line chart |
-| Show a distribution | Histogram |
-| Show a relationship | Scatter plot |
-| Examine spread and outliers | Box plot |
-| Examine correlations | Heatmap |
+→ [Open Section 07](07-data-visualization/README.md)
 
 ### 08. Exploratory Data Analysis
 
-Bring the complete workflow together using real datasets.
+Putting the complete Data Analyst workflow together.
 
-A typical analysis should follow:
+- Business question
+- Dataset understanding
+- Data quality checks
+- Cleaning
+- Exploration
+- Transformation
+- Analysis
+- Visualization
+- Finding patterns
+- Communicating insights
+- Business recommendations
 
-**Dataset → Understand → Inspect → Clean → Transform → Analyze → Visualize → Find patterns → Communicate insights**
+Projects progress from small datasets to sales, customer, multi-table, messy real-world, and market-research/survey datasets.
 
-A project notebook can follow this structure:
-
-```text
-1. Business Question
-2. Import Libraries
-3. Load Dataset
-4. Understand Dataset
-5. Data Quality Checks
-6. Data Cleaning
-7. Exploratory Analysis
-8. Visualization
-9. Key Findings
-10. Business Recommendations
-```
+→ [Open Section 08](08-exploratory-data-analysis/README.md)
 
 ## Learning Method
 
-Each concept should follow this cycle:
+Each concept follows:
 
-1. Understand the concept.
-2. Run a small example.
-3. Understand the output.
-4. Modify the example.
-5. Solve a small problem.
-6. Apply the concept to a real dataset.
+**Understand → Small example → Understand output → Modify → Small problem → Real dataset**
 
-The emphasis is on **learning by analyzing data**, not simply completing syntax exercises.
-
-## Recommended Practice Flow
+## Practice Flow
 
 ```text
 Learn a concept
@@ -236,28 +179,14 @@ Small exercise
       ↓
 Use it on a dataset
       ↓
-Combine it with previous concepts
+Combine with previous concepts
       ↓
 Build analysis
       ↓
 Repeat
 ```
 
-## Project Progression
-
-Practice should gradually move from small exercises to complete analyses.
-
-Suggested progression:
-
-1. Small structured datasets
-2. Sales analysis
-3. Customer analysis
-4. Multi-table analysis
-5. Messy real-world datasets
-6. Exploratory Data Analysis projects
-7. Market research / survey data analysis
-
-## Tools Used
+## Tools
 
 - Python
 - Jupyter Notebook
@@ -265,22 +194,41 @@ Suggested progression:
 - Pandas
 - Matplotlib
 - Seaborn
-- Data Wrangler for dataset inspection
-- PyGWalker for interactive exploration when useful
+- Data Wrangler when useful
+- PyGWalker when useful
 
 ## Repository Structure
 
 ```text
 python-for-data-analysis/
+│
 ├── README.md
+│
 ├── 01-python-foundations/
-├── 02-python-for-data/
+│   └── README.md
+│
+├── 02-python-for-working-with-data/
+│   └── README.md
+│
 ├── 03-numpy/
+│   └── README.md
+│
 ├── 04-pandas/
+│   └── README.md
+│
 ├── 05-data-cleaning/
+│   └── README.md
+│
 ├── 06-data-transformation-analysis/
+│   └── README.md
+│
 ├── 07-data-visualization/
+│   └── README.md
+│
 └── 08-exploratory-data-analysis/
+    └── README.md
 ```
 
-The repository will grow progressively as each stage is learned and practiced.
+## Progression
+
+The repository will grow progressively. We will add the actual Jupyter notebooks to each section as that section is learned and practiced.
